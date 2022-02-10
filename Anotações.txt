@@ -1,0 +1,84 @@
+======================== Introdução ao React ========================
+
+▶ O que é React?
+
+- React é uma biblioteca javascript Declarativa , eficiente e flexível para a criação de interface de usuário (UI)
+
+- É uma biblioteca e não um framework, é baseado em componentes e é utilizado para criar SPA's 
+
+- React é feito com Javascript então voc~e pode reaproveitar seus conhecimentos
+
+▶ O que são componnetes e por que eles são importantes?
+
+- O React é uma biblioteca baseada no conceito de componentes 
+- Os components permitem dividir a interface do usuário em partes independentes e reutilizáveis
+- São como funções do Javascript:
+    Aceitam entradas arbitrárias(chamadas **props**)
+    Retorna elementos React
+
+- Dois tipos de Componentes:
+    Funçoes 
+    Classes(features extras)
+
+▶ O que é JSX 
+
+- Não é apenas um HTML nem apenas JS
+- JSX serve para descrever como a nossa User Interface (UI) deve ser 
+- JSX não é interpretado pelo browser , por este motivo devemos utilizar um transpiler (em geral o babel), para realizar essa transpilação
+- Ao contrário do passado, em vez de colocar o javascript no HTML , o JSX nos permite colocar HTML em Javascript
+
+Vantagens:
+
+- Similaridade com HTML 
+- Melhor integração entre o HTML e o JS
+
+▶ Como o React atualiza as views?
+
+- DOM (Document Object Model)
+
+É um objeto/interface criado pelo Browser ue representa a estrutura do nosso documento HTML e que nos da meios para interagir com ele (usamos em geral o Javascript para afzer isso);
+
+- Virtual DOM 
+
+É uma representação em Javascript do DOM verdadeiro. Quando alterações e eventos acontecem, primeiro o React atualiza o virtual DOM, analisa as mudanças e o que precisa ser atualizado no DOM, e depois realiza isso conciliando o Virtual DOM e o DOM.
+
+- Porque o React usa o Virtual DOM?
+
+Acessar o DOM é mais lento que as operações em Javascript 
+
+O virtual DOM automaticamente encontra a maneira nais economica de arualizar o DOM (atualizando só os elementos necessários)
+
+- Entendendo os elementos
+
+Os menores blocos do react são elements, atrvés deles é que descrevemos o que vai aparecer na nossa tela 
+
+Diferente dos elementos do DOM, os elementos do React são objetos simples e 'baratos' de criar
+
+O virtual DOM é o responsável por atualizar o DOM e exibir esses elementos na tela
+
+Para renderizar um elemento,primeiro escolhemos um nó do DOM
+
+Tudo dentro desse nó será atualizado pelo Virtual DOM
+
+
+▶ CRIANDO UM NOVO PROJETO   
+
+Usamo no cmd o seguinte código: npx create-react-app [nome do seu projeto]
+
+======================== O que são Props ========================
+
+
+▶ Função Pura 
+
+- A função recebe duas propriedades a e b
+- A função não altera o valor das entradas
+- Sempre retorna o mesmo resultado para os mesmos tipos de entradas
+
+▶ Função impura
+
+A função altera o valor da sua entrada
+
+
+▶ única regra estrita do React
+
+- Todos os componentes React tem ue agir como funções puras em relação aos seus props
