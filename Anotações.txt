@@ -65,6 +65,8 @@ Tudo dentro desse nó será atualizado pelo Virtual DOM
 
 Usamo no cmd o seguinte código: npx create-react-app [nome do seu projeto]
 
+
+
 ======================== O que são Props ========================
 
 
@@ -82,3 +84,14 @@ A função altera o valor da sua entrada
 ▶ única regra estrita do React
 
 - Todos os componentes React tem ue agir como funções puras em relação aos seus props
+
+
+======================== o que são estados ========================
+
+- State é um objeto javascript que guarda os dados de um component e determina seu comportamento.
+
+- Quando um estado é atualizado o component é re-renderizado
+
+▶ Qual a diferença de props e State
+
+- props são passadas por outros components, o pai passa suas props para os filhos, já o state pertence a cada componente
