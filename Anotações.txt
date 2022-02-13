@@ -95,3 +95,17 @@ A função altera o valor da sua entrada
 ▶ Qual a diferença de props e State
 
 - props são passadas por outros components, o pai passa suas props para os filhos, já o state pertence a cada componente
+
+
+======================== Lifecycle ========================
+
+Todo component tem um Lifecycle, que é um ciclo de vida
+
+
+▶ Você pode monitorá-los ou manipulá-los durante 3 fases:
+
+- Mouting: Quando um elemento é colocado no dom
+
+- Updating: Quando um component é atuaizado. ocorrendo sempre que há uma mudança no estado ou propriedade de um componente
+
+- Unmouting: uando um componente é removido do dom 
