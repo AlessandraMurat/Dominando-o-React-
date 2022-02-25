@@ -1,5 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Planet from "./planet";
+import Form from "./form"
+
 
 async function getPlanets() {
   let response = await fetch('http://localhost:3000/api/planets.json') 
@@ -7,49 +9,35 @@ async function getPlanets() {
   return data;
 }
 
-class Planets extends React.Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      planets: []
-    };
-  }
 
-  removeLast = () => {
-    let new_planets = [...this.state.planets];
-    new_planets.pop()
-    this.setState(state => ({
-      planets:new_planets
-    }))
-  };
+const Planets = () => {
 
-  duplicatePlanet = () => {
-    let last_planet = this.state.planets[this.state.planets.length -1]
-    this.setState(state => ({
-      planets:[...this.state.planets, last_planet]
-    }))
-  }
+  const [planets, setPlanets] = useState([
+    
+  ])
 
-  componentDidMount() {
+  useEffect(() => {
     getPlanets().then(data => {
-      this.setState(state => ({
-        planets: data['planets']
-      }))
-    })
+          setPlanets(data['planets'])
+        })
+  }, [])
+   
+  const addPlanet = (new_planet) => {
+    setPlanets([...planets, new_planet])
   }
 
-  render() {
+
     return (
       <Fragment>
         <h3>Planets List</h3>
-        <button onClick={this.removeLast}>Remove Last</button>
-        <button onClick={this.duplicatePlanet}>Duplicate Last Planet</button>
         <hr />
-        {this.state.planets.map((planet, index) => (
+        <Form addPlanet={addPlanet}/>
+        <hr />
+        {planets.map((planet, index) => (
           <Planet
             id = {planet.id}
-            title={planet.title}
+           name={planet.name}
             description={planet.description}
             link={planet.link}
             img_url={planet.img_url}
@@ -59,6 +47,7 @@ class Planets extends React.Component {
       </Fragment>
     );
   }
-}
+
+
 
 export default Planets;

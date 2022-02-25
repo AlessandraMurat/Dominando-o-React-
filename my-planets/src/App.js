@@ -1,10 +1,10 @@
 import React from 'react'
-import Planets from './Components/planets';
+import Router from './Routes/routes';
 
 function App() {
   return (
     <div>
-      <Planets/>
+      <Router/>
     </div>
   );
 }

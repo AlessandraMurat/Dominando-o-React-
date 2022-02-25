@@ -109,3 +109,44 @@ Todo component tem um Lifecycle, que é um ciclo de vida
 - Updating: Quando um component é atuaizado. ocorrendo sempre que há uma mudança no estado ou propriedade de um componente
 
 - Unmouting: uando um componente é removido do dom 
+
+
+
+======================== O que sõa hooks ========================
+
+
+Os hooks são uma forma de usarmos state, lifecycle e compartilharmos lógica em componente funcionais
+Eles foram inseridos na versão 16.8
+
+▶ Por que usar hooks?
+
+- Os components de função são mais fáceis de compreender
+
+- Hooks nos ajudam a compartilhar lógica entre components
+
+
+======================== Uncontrolled e controlled components ========================
+
+▶ O que é um Uncontrolled component?
+
+Em geral é um component que tem seus dados gerenciados pela própria DOM (como um input normal) sem relação com o state do component 
+
+▶ O que é um controlled component?
+
+Components controlados estão associados aos estados do component, ou seja, eles exibem informações baseadas no state e quando alterados, alteram também o state
+
+
+
+======================== SPAs e Rotas ========================
+
+▶ O que são SPAs
+
+As SPAs(Single Page Aplication) são aplicações web que tem como objetivo trazer uma experiência similar a de um APP desketop para o usuário(sem os reloads comuns de sites)
+
+▶ O que são rotas
+
+São os caminhos que usamos no browser para acessar página específicas de um site 
+
+▶ Como separar seu APP react em Páginas, sem realod?
+
+A principal biblioteca que nos permite fazer isso se chama React Router
